@@ -78,7 +78,7 @@ header nav ul li a {
 .home {
   width: 100vw;
   height: 100vh;
-  background-image: url("https://images.datacamp.com/image/upload/v1689325496/datarhys_an_absurdist_oil_painting_of_an_artificially_intellige_a23fb2c4_c77f_4552_b348_460455ee31aa_d94c99ad7a.png");
+  background-image: url("./assets/bg-home.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
