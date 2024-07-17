@@ -422,3 +422,62 @@ footer .copyright .terms {
   display: block;
   transform: rotateY(180deg);
 }
+
+/* newsletter */
+
+.newsletter {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1C1C1C;
+    color: white;
+    padding: 40px;
+    align-items: center;
+    margin: 60px 0;
+}
+
+.newsletter .newsletter-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.newsletter .newsletter-text h2 {
+    font-size: 36px;
+}
+
+.newsletter .newsletter-text p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.newsletter .newsletter-text p span {
+    color: #fa6400;
+}
+
+.newsletter .newsletter-text .second {
+    font-size: 12px;
+}
+
+.newsletter .input-field {
+    display: flex;
+    gap: 10px;
+    width: 40%;
+}
+
+.newsletter .input-field input[type="email"]{
+    padding: 10px;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.newsletter .input-field button {
+    background-color: #fa6400;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
