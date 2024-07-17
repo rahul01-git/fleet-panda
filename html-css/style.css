@@ -101,6 +101,7 @@ header nav ul li a {
   z-index: 9999;
   text-align: left;
   letter-spacing: 2px;
+  line-height: 1;
 }
 
 .home .home-content .home-text h2 {
@@ -109,11 +110,12 @@ header nav ul li a {
 
 .home .home-content .home-text p {
   font-size: 16px;
-  margin-top: 20px;
+  margin-top: 45px;
   letter-spacing: 0.5px;
   color: rgb(221, 221, 221);
   margin-bottom: 20px;
   letter-spacing: 1px;
+  line-height: 1.5;
 }
 
 .home .home-content .home-text span {
