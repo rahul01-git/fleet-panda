@@ -247,6 +247,7 @@ header nav ul li a {
   padding: 15px 0;
   font-size: 16px;
   font-weight: bolder;
+  cursor: pointer;
 }
 
 .contact .contact-segments .contact-segments-details {
