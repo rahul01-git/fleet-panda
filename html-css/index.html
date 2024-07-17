@@ -233,6 +233,7 @@
               name="name"
               placeholder="Enter your name..."
               autocomplete="off"
+              required
             />
           </div>
           <div class="form-input">
@@ -243,6 +244,7 @@
               name="email"
               placeholder="Enter your email..."
               autocomplete="off"
+              required
             />
           </div>
           <div class="form-input">
@@ -253,11 +255,12 @@
               name="phone"
               placeholder="+977 9800000000"
               autocomplete="off"
+              required
             />
           </div>
           <div class="form-input">
             <label for="message">Message</label>
-            <textarea name="message" id="message" autocomplete="off" placeholder="write your message..."></textarea
+            <textarea name="message" id="message" autocomplete="off" placeholder="write your message..." required></textarea
             >
           </div>
           <button class="form-button">Send Message</button>
@@ -304,10 +307,10 @@
             <p class="first">Get regular industry insights, product updates & more</p>
             <p class="second">By subscribing you agree to our <span>Privacy Policy</span> and provide consent to receive updates trom our company.</p>
         </div>
-        <div class="input-field">
-            <input type="email" placeholder="Enter your work email..."  autocomplete="off"> 
+        <form class="input-field">
+            <input type="email" placeholder="Enter your work email..."  autocomplete="off" required> 
             <button>Subscribe</button>
-        </div>
+        </form>
      </section>
     <!-- /newsletter -->
      
