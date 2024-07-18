@@ -224,7 +224,7 @@
         </p>
       </div>
       <div class="contact-segments">
-        <form action="#" class="form">
+        <form class="form" id="myForm" onsubmit="validateForm(event)"> 
           <div class="form-input">
             <label for="name">Full Name</label>
             <input
@@ -235,6 +235,7 @@
               autocomplete="off"
               required
             />
+            <span class="error-message" id="name-error"></span>
           </div>
           <div class="form-input">
             <label for="email">Email</label>
@@ -246,6 +247,7 @@
               autocomplete="off"
               required
             />
+            <span class="error-message" id="email-error"></span>
           </div>
           <div class="form-input">
             <label for="phone">Phone</label>
@@ -257,10 +259,11 @@
               autocomplete="off"
               required
             />
+            <span class="error-message" id="phone-error"></span>
           </div>
           <div class="form-input">
             <label for="message">Message</label>
-            <textarea name="message" id="message" autocomplete="off" placeholder="write your message..." required></textarea
+            <textarea name="message" id="message" required autocomplete="off" placeholder="write your message..."></textarea
             >
           </div>
           <button class="form-button">Send Message</button>
@@ -370,5 +373,7 @@
       </div>
     </footer>
     <!-- /footer  -->
+
+    <script src="./script.js"></script>
   </body>
 </html>
