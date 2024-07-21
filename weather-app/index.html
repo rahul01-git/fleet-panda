@@ -14,31 +14,53 @@
     />
   </head>
   <body>
-    <div class="weather-app">
-      <div class="header">
-        <input type="text" placeholder="enter your city name..." />
-        <button><i class="fa-solid fa-magnifying-glass"></i></button>
-      </div>
-      <div class="weather">
-        <div class="img-container">
-          <img src="./assets/sun.svg" alt="sun" />
+    <div class="container">
+      <div class="weather-app">
+        <h2>Weather App</h2>
+        <div class="header">
+          <input type="text" placeholder="Enter your city name..." id="city" />
+          <button id="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
-        <p class="temp">7°c</p>
-        <p class="city">Kathmandu</p>
-      </div>
-      <div class="more-details">
-        <div class="humidity">
-          <i class="fa-solid fa-water"></i>
-          <div class="humidity-details">
-            <p><span>20%</span> Humidity</p>
+        <div class="weather">
+          <div class="img-container">
+            <img
+              src="./assets/clear.png"
+              alt="weather-icon"
+              class="weather-icon"
+            />
+          </div>
+          <p class="temp"></p>
+          <div class="tooltip">
+            <span id="convert"><i class="fa-solid fa-right-left"></i></span>
+            <div class="tooltip-text">Convert between Celsius / Fahrenheit</div>
+          </div>
+          <p class="city"></p>
+          <div class="flag-container">
+            <img
+              src=""
+              alt="country-flag"
+              class="country-flag"
+            />
           </div>
         </div>
-        <div class="wind">
-          <i class="fa-solid fa-wind"></i>
-          <div class="wind-details">
-            <p><span>10.29 km/h</span> Wind speed</p>
+        <div class="more-details">
+          <div class="humidity">
+            <i class="fa-solid fa-water"></i>
+            <div class="humidity-details">
+              <p><span class="humid"></span> Humidity</p>
+            </div>
+          </div>
+          <div class="wind">
+            <i class="fa-solid fa-wind"></i>
+            <div class="wind-details">
+              <p><span class="wind-speed"></span> Wind speed</p>
+            </div>
           </div>
         </div>
+      </div>
+      <div class="history">
+        <h3>History</h3>
+        <ul id="history-list" class="history-list"></ul>
       </div>
     </div>
     <script src="./script.js"></script>
