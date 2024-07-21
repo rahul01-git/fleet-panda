@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: #333;
+  color: whitesmoke;
+  overflow-x: hidden;
+}
+
+.weather-app {
+  width: 40%;
+  margin: auto;
+  align-items: center;
+  border-radius: 8px;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: linear-gradient(to bottom, #87ceeb, #1e90ff);
+}
+
+.weather-app .header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  width: 80%;
+}
+
+.weather-app .header input {
+  outline: none;
+  width: 70%;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 15px 0 0 15px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+}
+
+.weather-app .header button {
+  border: 1px solid #ccc;
+  width: 20%;
+  outline: none;
+  padding: 8px 15px;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  background-color: #f0f0f0;
+}
+
+.weather-app .header button:hover {
+  background-color: whitesmoke;
+}
+
+.weather-app .weather {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.weather-app .weather .img-container {
+  width: 80px;
+  height: 80px;
+}
+
+.weather-app .weather .img-container img {
+  width: 100%;
+  height: auto;
+}
+
+.weather-app .weather .temp {
+  font-size: 44px;
+  font-weight: bolder;
+}
+
+.weather-app .weather .city {
+  font-size: 30px;
+}
+
+.weather-app .more-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-app .more-details .humidity {
+  display: flex;
+  gap: 10px;
+}
+
+.weather-app .more-details .humidity i {
+  font-size: 40px;
+}
+
+.weather-app .more-details .humidity .humidity-details {
+  font-size: 16px;
+}
+
+.weather-app .more-details .humidity .humidity-details span {
+  display: block;
+  font-size: 20px;
+}
+
+.weather-app .more-details .wind {
+  display: flex;
+  gap: 10px;
+}
+
+.weather-app .more-details .wind i {
+  font-size: 40px;
+}
+
+.weather-app .more-details .wind .wind-details {
+  font-size: 16px;
+}
+
+.weather-app .more-details .wind .wind-details span {
+  display: block;
+  font-size: 20px;
+}
