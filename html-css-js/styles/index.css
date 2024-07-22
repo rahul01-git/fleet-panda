@@ -41,18 +41,21 @@ header nav {
   font-weight: bolder;
 }
 
-header nav ul, header ul {
+header nav ul,
+header ul {
   display: flex;
   float: right;
 }
 
-header nav ul li, header ul li {
+header nav ul li,
+header ul li {
   list-style: none;
   font-weight: 600;
   margin-right: 20px;
 }
 
-header nav ul li a, header ul li a {
+header nav ul li a,
+header ul li a {
   color: #333;
   font: bolder;
   font-size: large;
@@ -429,61 +432,61 @@ footer .copyright .terms {
 /* newsletter */
 
 .newsletter {
-    display: flex;
-    justify-content: space-between;
-    background-color: #1C1C1C;
-    color: white;
-    padding: 40px;
-    align-items: center;
-    margin: 60px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #1c1c1c;
+  color: white;
+  padding: 40px;
+  align-items: center;
+  margin: 60px 0;
 }
 
 .newsletter .newsletter-text {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .newsletter .newsletter-text h2 {
-    font-size: 36px;
+  font-size: 36px;
 }
 
 .newsletter .newsletter-text p {
-    font-size: 16px;
-    font-weight: 300;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .newsletter .newsletter-text p span {
-    color: #fa6400;
+  color: #fa6400;
 }
 
 .newsletter .newsletter-text .second {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .newsletter .input-field {
-    display: flex;
-    gap: 10px;
-    width: 40%;
+  display: flex;
+  gap: 10px;
+  width: 40%;
 }
 
-.newsletter .input-field input[type="email"]{
-    padding: 10px;
-    border: none;
-    outline: none;
-    width: 100%;
+.newsletter .input-field input[type="email"] {
+  padding: 10px;
+  border: none;
+  outline: none;
+  width: 100%;
 }
 
 .newsletter .input-field button {
-    background-color: #fa6400;
-    color: white;
-    border: none;
-    outline: none;
-    border-radius: 8px;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
+  background-color: #fa6400;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .error-message {
@@ -492,6 +495,168 @@ footer .copyright .terms {
   margin-top: 5px;
 }
 
-#login, #signup, #logout {
+#login,
+#signup,
+#logout {
   display: none;
+}
+
+@media (max-width: 1260px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  header nav {
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .home .home-content .home-img-container {
+    display: none;
+  }
+
+  .home .home-content .home-text {
+    width: 80%;
+    color: white;
+    z-index: 9999;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  .home .home-content .home-text h2 {
+    font-size: 42px;
+    margin-top: -100px;
+  }
+
+  .home .home-content .home-text p {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .home .home-content .home-btn {
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .about .about-content {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .about .img-container {
+    width: 45%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact .contact-segments {
+    flex-direction: column;
+    padding: 0px;
+    width: 90%;
+  }
+
+  .contact .contact-segments .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 40%;
+    margin: auto;
+  }
+
+  .contact .contact-segments .contact-segments-details {
+    padding: 35px;
+    width: 40%;
+    margin: auto;
+  }
+
+  .contact hr {
+    width: 60%;
+    margin: 20px auto;
+  }
+
+  .service .services {
+    justify-content: center;
+  }
+
+  .client .clients .client-detail {
+    width: 18%;
+    height: auto;
+    padding: 5px;
+  }
+
+  .newsletter {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .newsletter .input-field {
+    flex-direction: column;
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  .newsletter .newsletter-text h2 {
+    font-size: 30px;
+  }
+
+  footer .footer-links {
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 760px) {
+  footer .copyright {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  footer .copyright .copyright-text {
+    width: 100%;
+    text-align: center;
+  }
+  
+  footer .copyright .terms {
+    width: 100%;
+  }
+}
+
+@media (max-width: 620px) {
+  header nav ul {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  header > ul {
+    width: 100%;
+  }
+
+  .home .home-content .home-text h2 {
+    font-size: 26px;
+  }
+
+  .home .home-content .home-text p {
+    font-size: 12px;
+  }
+
+  .home .home-content .home-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .newsletter .newsletter-text h2 {
+    font-size: 32px;
+  }
+
+  .newsletter .newsletter-text p {
+    font-size: 14px;
+  }
 }
