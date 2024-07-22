@@ -1,8 +1,11 @@
 const isLoggedIn = localStorage.length;
-if (isLoggedIn) document.getElementById("logout").style.display = "block";
-else {
+if (isLoggedIn) {
+  document.getElementById("logout").style.display = "block";
+  document.getElementById("blog").style.display = "block";
+} else {
   document.getElementById("login").style.display = "block";
   document.getElementById("signup").style.display = "block";
+  document.getElementById("blog").style.display = "none";
 }
 
 import { validateEmail, validateFullName } from "./validation.js";

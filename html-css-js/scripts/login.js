@@ -1,5 +1,8 @@
 const isLoggedIn = localStorage.length;
 if (isLoggedIn) window.location.href = "/app/posts.html";
+else {
+  document.getElementById("blog").style.display = "none";
+}
 
 import { validateEmail, validatePassword } from "./validation.js";
 
