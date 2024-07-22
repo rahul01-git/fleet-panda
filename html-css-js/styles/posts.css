@@ -65,17 +65,16 @@ header ul li a {
 /* posts  */
 
 .posts {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
   gap: 40px;
-  width: 70%;
-  margin: auto;
   padding: 20px;
 }
 
-.posts h2 {
+h2 {
   text-align: center;
-  margin: 20px 0;
+  margin: 50px 0;
+  font-size: 34px;
 }
 
 .posts .post {
@@ -87,16 +86,39 @@ header ul li a {
   gap: 10px;
 }
 
+.posts .post .img-container {
+  width: 90%;
+  margin: auto;
+}
+
+.posts .post .img-container img {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+
+@media (max-width:1300px){
+  .posts {
+    grid-template-columns: auto auto auto;
+  }
+}
+
 @media (max-width: 1080px) {
   header {
     flex-direction: column;
     height: auto;
     padding: 20px;
   }
-  
+
   header nav {
     margin-top: 20px;
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width:900px){
+  .posts {
+    grid-template-columns: auto auto;
   }
 }
 
@@ -108,5 +130,9 @@ header ul li a {
 
   header > ul {
     width: 100%;
+  }
+
+  .posts {
+    grid-template-columns: auto;
   }
 }
