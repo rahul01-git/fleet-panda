@@ -1,3 +1,6 @@
+const isLoggedIn = localStorage.length;
+if (isLoggedIn) window.location.href = "/app/posts.html";
+
 import {
   validateEmail,
   validateFullName,
@@ -25,7 +28,7 @@ function validateConfirmPassword() {
   }
 }
 
-function validateForm(e) {
+async function validateForm(e) {
   e.preventDefault();
 
   const isFullNameValid = validateFullName(fullName.value, nameError);
@@ -39,16 +42,21 @@ function validateForm(e) {
     isPasswordValid &&
     isConfirmPasswordValid
   ) {
-    form.submit();
-    alert(
-      "data submitted succesfully !" +
-        JSON.stringify({
-          name: fullName.value,
-          email: email.value,
-          password: password.value,
-        })
-    );
-    location.reload(true);
+    const bodyData = { email: email.value, password: password.value };
+    const response = await fetch("https://reqres.in/api/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(bodyData),
+    });
+    const data = await response.json();
+    if (data.error) alert(data.error);
+    else {
+      alert(JSON.stringify({ message: "Signup succesful", token: data.token }));
+      localStorage.setItem(email.value, data.token);
+      window.location.href = "/app/posts.html";
+    }
   } else {
     alert("Please solve validation errors first");
   }

@@ -491,3 +491,7 @@ footer .copyright .terms {
   font-size: 14px;
   margin-top: 5px;
 }
+
+#login, #signup, #logout {
+  display: none;
+}
