@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Posts</title>
-    <link rel="stylesheet" href="../styles/posts.css">
+    <link rel="stylesheet" href="../styles/posts.css" />
+    <script src="../scripts/posts.js"></script>
   </head>
   <body>
     <!-- header -->
@@ -21,11 +22,17 @@
         </ul>
       </nav>
       <ul>
-        <li><a href="./login.html" onclick="localStorage.clear()">Logout</a></li>
+        <li>
+          <a href="./login.html" onclick="localStorage.clear()">Logout</a>
+        </li>
       </ul>
     </header>
     <!-- /header -->
 
-    <script src="../scripts/posts.js"></script>
+    <!-- posts  -->
+    <div class="posts">
+      <h2>Our Recent Blogs</h2>
+    </div>
+    <!-- /posts  -->
   </body>
 </html>

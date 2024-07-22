@@ -120,3 +120,50 @@ header ul li a {
   font-size: 14px;
   margin-top: 5px;
 }
+
+
+@media (max-width: 1080px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+  
+  header nav {
+    display: none;
+  }
+
+  header > ul  {
+    justify-content: center;
+  }
+
+  header > ul > li {
+    margin-top: 20px;
+  }
+
+}
+
+@media (max-width: 620px) {
+  header nav ul {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  header nav ul li {
+    width: 50%; 
+  }
+
+  header > ul {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px ){
+  .signup-form {
+    top: 60%;
+  }
+
+  .signup-form form .form-input {
+    gap: 5px;
+  }
+}

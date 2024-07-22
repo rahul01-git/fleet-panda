@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +7,7 @@
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -44,7 +46,6 @@ header nav {
 header nav ul,
 header ul {
   display: flex;
-  float: right;
 }
 
 header nav ul li,
@@ -59,4 +60,53 @@ header ul li a {
   color: #333;
   font: bolder;
   font-size: large;
+}
+
+/* posts  */
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 70%;
+  margin: auto;
+  padding: 20px;
+}
+
+.posts h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.posts .post {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 1080px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+  
+  header nav {
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 620px) {
+  header nav ul {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  header > ul {
+    width: 100%;
+  }
 }
