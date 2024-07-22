@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fleetpanda</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -17,16 +17,20 @@
   <body>
     <!-- header -->
     <header>
-      <a href="#"><img src="./assets/logo.png" alt="logo" /></a>
+      <a href="./index.html"><img src="./assets/images/logo.png" alt="logo" /></a>
       <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
+          <li><a href="./index.html">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#service">Services</a></li>
           <li><a href="#client">Clients</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <ul>
+        <li><a href="./app/login.html">Login</a></li>
+        <li><a href="./app/signup.html">Signup</a></li>
+      </ul>
     </header>
     <!-- /header -->
 
@@ -50,7 +54,7 @@
         </div>
         <div class="home-img-container">
           <img
-            src="./assets/home-new-banner.png"
+            src="./assets/images/home-new-banner.png"
             alt="home home-new-banner"
             class="home-img"
           />
@@ -86,7 +90,7 @@
           </p>
         </div>
         <div class="img-container">
-          <img src="./assets/about.png" />
+          <img src="./assets/images/about.png" />
         </div>
       </div>
     </section>
@@ -195,19 +199,19 @@
       <h2>Our Clients</h2>
       <div class="clients">
         <div class="client-detail">
-          <img src="./assets/client1.png" alt="client" />
+          <img src="./assets/images/client1.png" alt="client" />
         </div>
         <div class="client-detail">
-          <img src="./assets/clilent2.jpg" alt="client" />
+          <img src="./assets/images/clilent2.jpg" alt="client" />
         </div>
         <div class="client-detail">
-          <img src="./assets/client3.jpg" alt="client" />
+          <img src="./assets/images/client3.jpg" alt="client" />
         </div>
         <div class="client-detail">
-          <img src="./assets/client4.jpg" alt="client" />
+          <img src="./assets/images/client4.jpg" alt="client" />
         </div>
         <div class="client-detail">
-          <img src="./assets/client5.png" alt="client" />
+          <img src="./assets/images/client5.png" alt="client" />
         </div>
       </div>
     </section>
@@ -224,7 +228,7 @@
         </p>
       </div>
       <div class="contact-segments">
-        <form class="form" id="myForm" onsubmit="validateForm(event)"> 
+        <form class="form" id="myForm" onsubmit="validateForm(event)">
           <div class="form-input">
             <label for="name">Full Name</label>
             <input
@@ -263,8 +267,13 @@
           </div>
           <div class="form-input">
             <label for="message">Message</label>
-            <textarea name="message" id="message" required autocomplete="off" placeholder="write your message..."></textarea
-            >
+            <textarea
+              name="message"
+              id="message"
+              required
+              autocomplete="off"
+              placeholder="write your message..."
+            ></textarea>
           </div>
           <button class="form-button">Send Message</button>
         </form>
@@ -304,19 +313,28 @@
     <!-- /contact  -->
 
     <!-- newsletter -->
-     <section class="newsletter">
-        <div class="newsletter-text">
-            <h2>Join our newsletter</h2>
-            <p class="first">Get regular industry insights, product updates & more</p>
-            <p class="second">By subscribing you agree to our <span>Privacy Policy</span> and provide consent to receive updates trom our company.</p>
-        </div>
-        <form class="input-field">
-            <input type="email" placeholder="Enter your work email..."  autocomplete="off" required> 
-            <button>Subscribe</button>
-        </form>
-     </section>
+    <section class="newsletter">
+      <div class="newsletter-text">
+        <h2>Join our newsletter</h2>
+        <p class="first">
+          Get regular industry insights, product updates & more
+        </p>
+        <p class="second">
+          By subscribing you agree to our <span>Privacy Policy</span> and
+          provide consent to receive updates trom our company.
+        </p>
+      </div>
+      <form class="input-field">
+        <input
+          type="email"
+          placeholder="Enter your work email..."
+          autocomplete="off"
+          required
+        />
+        <button>Subscribe</button>
+      </form>
+    </section>
     <!-- /newsletter -->
-     
 
     <!-- footer  -->
     <footer>
@@ -374,6 +392,6 @@
     </footer>
     <!-- /footer  -->
 
-    <script src="./script.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>

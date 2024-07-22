@@ -2,7 +2,7 @@ const form = document.getElementById("myForm");
 const fullName = document.getElementById("name");
 const email = document.getElementById("email");
 const phone = document.getElementById("phone");
-  
+
 const nameError = document.getElementById("name-error");
 const emailError = document.getElementById("email-error");
 const phoneError = document.getElementById("phone-error");
@@ -47,7 +47,7 @@ function validateForm(event) {
   if (isFullNameValid && isEmailValid && isPhoneValid) {
     form.submit();
     alert("data submitted succesfully !");
-    location.reload(true)
+    location.reload(true);
   } else {
     alert("Please solve validation errors first");
   }

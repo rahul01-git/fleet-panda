@@ -41,18 +41,18 @@ header nav {
   font-weight: bolder;
 }
 
-header nav ul {
+header nav ul, header ul {
   display: flex;
   float: right;
 }
 
-header nav ul li {
+header nav ul li, header ul li {
   list-style: none;
   font-weight: 600;
   margin-right: 20px;
 }
 
-header nav ul li a {
+header nav ul li a, header ul li a {
   color: #333;
   font: bolder;
   font-size: large;
@@ -78,7 +78,7 @@ header nav ul li a {
 .home {
   width: 100vw;
   height: 100vh;
-  background-image: url("./assets/bg-home.png");
+  background-image: url("../assets/images/bg-home.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
