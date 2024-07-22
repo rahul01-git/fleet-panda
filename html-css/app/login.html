@@ -29,7 +29,7 @@
     <!-- login form  -->
     <section class="login-form">
       <h3>Login</h3>
-      <form action="#">
+      <form id="loginForm">
         <div class="form-input">
           <label for="email">Email address</label>
           <input
@@ -39,6 +39,7 @@
             placeholder=" enter your email..."
             required
           />
+          <span class="error-message" id="email-error"></span>
         </div>
         <div class="form-input">
           <label for="password">Password</label>
@@ -49,10 +50,13 @@
             placeholder=" enter your password..."
             required
           />
+          <span class="error-message" id="password-error"></span>
         </div>
         <button type="submit">Login</button>
       </form>
     </section>
     <!-- /login form  -->
+
+    <script type="module" src="../scripts/login.js"></script>
   </body>
 </html>

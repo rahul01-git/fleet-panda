@@ -41,18 +41,21 @@ header nav {
   font-weight: bolder;
 }
 
-header nav ul, header ul {
+header nav ul,
+header ul {
   display: flex;
   float: right;
 }
 
-header nav ul li, header ul li {
+header nav ul li,
+header ul li {
   list-style: none;
   font-weight: 600;
   margin-right: 20px;
 }
 
-header nav ul li a, header ul li a {
+header nav ul li a,
+header ul li a {
   color: #333;
   font: bolder;
   font-size: large;
@@ -110,4 +113,10 @@ header nav ul li a, header ul li a {
   .login-form {
     width: 30%;
   }
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
 }

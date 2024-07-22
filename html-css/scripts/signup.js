@@ -1,3 +1,9 @@
+import {
+  validateEmail,
+  validateFullName,
+  validatePassword,
+} from "./validation.js";
+
 const form = document.getElementById("signupForm");
 const fullName = document.getElementById("name");
 const email = document.getElementById("email");
@@ -8,36 +14,6 @@ const nameError = document.getElementById("name-error");
 const emailError = document.getElementById("email-error");
 const passwordError = document.getElementById("password-error");
 const confirmPasswordError = document.getElementById("confirm-password-error");
-
-function validateFullName() {
-  if (!fullName.value.match(/^[a-zA-Z\s]+$/)) {
-    nameError.textContent = "Please enter a valid name (Alphabets only)";
-    return false;
-  } else {
-    nameError.textContent = "";
-    return true;
-  }
-}
-
-function validateEmail() {
-  if (!email.value.match(/^[a-zA-Z0-9._+]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/)) {
-    emailError.textContent = "Please enter a valid email format";
-    return false;
-  } else {
-    emailError.textContent = "";
-    return true;
-  }
-}
-
-function validatePassword() {
-  if (!password.value.match(/^\w{4,12}$/)) {
-    passwordError.textContent = "Invalid password length (min 4, max 12)";
-    return false;
-  } else {
-    passwordError.textContent = "";
-    return true;
-  }
-}
 
 function validateConfirmPassword() {
   if (password.value !== confirmPassword.value) {
@@ -52,9 +28,9 @@ function validateConfirmPassword() {
 function validateForm(e) {
   e.preventDefault();
 
-  const isFullNameValid = validateFullName();
-  const isEmailValid = validateEmail();
-  const isPasswordValid = validatePassword();
+  const isFullNameValid = validateFullName(fullName.value, nameError);
+  const isEmailValid = validateEmail(email.value, emailError);
+  const isPasswordValid = validatePassword(password.value, passwordError);
   const isConfirmPasswordValid = validateConfirmPassword();
 
   if (
@@ -78,8 +54,12 @@ function validateForm(e) {
   }
 }
 
-fullName.addEventListener("keyup", validateFullName);
-email.addEventListener("keyup", validateEmail);
-password.addEventListener("keyup", validatePassword);
+fullName.addEventListener("keyup", () =>
+  validateFullName(fullName.value, nameError)
+);
+email.addEventListener("keyup", () => validateEmail(email.value, emailError));
+password.addEventListener("keyup", () =>
+  validatePassword(password.value, passwordError)
+);
 confirmPassword.addEventListener("keyup", validateConfirmPassword);
 form.addEventListener("submit", (e) => validateForm(e));
