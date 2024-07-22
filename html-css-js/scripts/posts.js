@@ -16,7 +16,10 @@ if (!loggedIn) {
       const bodyEl = document.createElement("p");
       const imgContainerEl = document.createElement('div')
       const imageEl = document.createElement('img')
+      const hrefEl = document.createElement('a')
 
+      hrefEl.innerText = 'read more ...'
+      hrefEl.href = `/app/post.html?id=${data.id}`
       titleEl.innerText = data.title;
       bodyEl.innerText = data.body;
       imageEl.src = imgData[i].url
@@ -31,6 +34,7 @@ if (!loggedIn) {
       divEl.appendChild(imgContainerEl)
       divEl.appendChild(titleEl);
       divEl.appendChild(bodyEl);
+      divEl.appendChild(hrefEl)
 
       postsDiv.appendChild(divEl);
     });

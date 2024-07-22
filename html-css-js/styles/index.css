@@ -20,6 +20,7 @@ a {
 
 header {
   height: 80px;
+  z-index: 99999;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -547,6 +548,11 @@ footer .copyright .terms {
     padding: 20px 10px;
   }
 
+  .about .about-description {
+    width: 80%;
+    line-height: 1.3;
+  }
+
   .about .img-container {
     width: 45%;
     height: auto;
@@ -565,13 +571,13 @@ footer .copyright .terms {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 40%;
+    width: 80%;
     margin: auto;
   }
 
   .contact .contact-segments .contact-segments-details {
     padding: 35px;
-    width: 40%;
+    width: 80%;
     margin: auto;
   }
 
@@ -582,12 +588,6 @@ footer .copyright .terms {
 
   .service .services {
     justify-content: center;
-  }
-
-  .client .clients .client-detail {
-    width: 18%;
-    height: auto;
-    padding: 5px;
   }
 
   .newsletter {
@@ -622,9 +622,24 @@ footer .copyright .terms {
     width: 100%;
     text-align: center;
   }
-  
+
   footer .copyright .terms {
     width: 100%;
+  }
+  .service .services .service-box {
+    width: 150px;
+    height: auto;
+  }
+
+  .client .clients {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .client .clients .client-detail {
+    width: 25%;
+    height: auto;
+    padding: 5px;
   }
 }
 
