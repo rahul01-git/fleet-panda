@@ -1,19 +1,21 @@
-const loggedIn = localStorage.length;
-if (!loggedIn) {
-  alert("Please login to view to page !");
-  window.location.href = "/app/login.html";
-} else {
-  async function fetchpost() {
+import { requestApi } from "./request.js";
+import { handleAuthentication } from "./utils.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+  const isloggedIn = handleAuthentication();
+  if (!isloggedIn) {
+    window.location.href = '/app/login.html'
+  }
+
+  async function fetchPost() {
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
-    const response = await fetch(
+    const data = await requestApi(
       `https://jsonplaceholder.typicode.com/posts/${id}`
     );
-    const imageRes = await fetch(
+    const imgData = await requestApi(
       `https://jsonplaceholder.typicode.com/photos/${id}`
     );
-    const data = await response.json();
-    const imgData = await imageRes.json();
 
     document.title = data.title;
 
@@ -24,7 +26,6 @@ if (!loggedIn) {
     const titleEl = document.createElement("h2");
     const bodyEl = document.createElement("p");
 
-    divEl.classList.add("post");
     imgContainerEl.classList.add("img-container");
     postDetailEl.classList.add("post-detail");
     titleEl.classList.add("title");
@@ -45,5 +46,6 @@ if (!loggedIn) {
       divEl.appendChild(postDetailEl);
     }, 1000);
   }
-  fetchpost();
-}
+
+  fetchPost();
+});
