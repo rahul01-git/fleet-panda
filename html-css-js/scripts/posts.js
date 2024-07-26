@@ -4,7 +4,7 @@ import { handleAuthentication } from "./utils.js";
 document.addEventListener("DOMContentLoaded", () => {
   const isloggedIn = handleAuthentication();
   if (!isloggedIn) {
-    window.location.href = '/app/login.html'
+    window.location.href = "/app/login.html";
   }
 
   async function fetchPosts() {
@@ -39,7 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
       divEl.appendChild(bodyEl);
       divEl.appendChild(hrefEl);
 
-      postsDiv.appendChild(divEl);
+      setTimeout(() => {
+        document.querySelector(".loader").style.display = "none";
+        postsDiv.appendChild(divEl);
+      }, 1000);
     });
   }
 

@@ -63,3 +63,4 @@ document.addEventListener("DOMContentLoaded", () => {
     { element: form, event: "submit", handler: validateForm },
   ]);
 });
+
